@@ -1,3 +1,27 @@
 from django.db import models
 
 # Create your models here.
+class Pais(models.Model):
+    nombre = models.CharField(max_length=50, unique=True)
+
+    def __str__(self):
+        return self.nombre
+
+class Sector (models.Model):
+    nombre = models.CharField(max_length=50, unique=True)
+    
+    def __str__(self) -> str:
+            return self.nombre,
+
+
+class Personal (models.Model):
+    nombre = models.CharField(max_length=50)    
+    apellido = models.CharField(max_length=50)  
+    nacimiento = models.DateField(null=True)    
+    pais_origen = models.ForeignKey(Pais,on_delete=models.SET_NULL, null=True)
+    sector =  models.ForeignKey(Sector,on_delete=models.SET_NULL, null=True)
+    def __str__(self) -> str:
+        return self.nombre
+    
+
+    
