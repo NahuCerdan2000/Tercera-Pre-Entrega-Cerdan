@@ -1,0 +1,13 @@
+{% extends 'home/base.html' %}
+
+{% block CONTENIDO %}
+    <h2>Añadir un Pais</h2>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Añadir un Pais">
+    </form>
+
+    <a href="{% url 'home:index' %}">Ir a Home</a>
+{% endblock CONTENIDO %}

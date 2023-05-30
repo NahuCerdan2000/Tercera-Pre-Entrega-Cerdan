@@ -1,7 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'home/base.html' %}
 
 {% block CONTENIDO %}
-    <h1 style="color: chartreuse;">Bienvendo al gestor de personal de S&E</h1>
-    <a href="{% url 'personal:index' %}">Personal</a>
-{% endblock CONTENIDO %}
+   <h2>Bienvenido!</h2>
+   <h2>Menu Principal</h2>
+   <a href="{% url 'home:añadir_personal' %}">Añadir un Nuevo Personal</a>
+   <a href="{% url 'home:añadir_pais' %}">Añadir un Pais</a>
+   <a href="{% url 'home:añadir_sector' %}">Añadir un Nuevo Sector</a>
 
+
+{% endblock CONTENIDO %}
