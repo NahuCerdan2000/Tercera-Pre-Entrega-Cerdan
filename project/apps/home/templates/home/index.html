@@ -1,0 +1,11 @@
+{% extends 'home/base.html' %}
+
+{% block CONTENIDO %}
+   <h2>Bienvenido!</h2>
+   <h2>Menu Principal</h2>
+   <a href="{% url 'home:añadir_personal' %}">Añadir un Nuevo Personal</a>
+   <a href="{% url 'home:añadir_pais' %}">Añadir un Pais</a>
+   <a href="{% url 'home:añadir_sector' %}">Añadir un Nuevo Sector</a>
+
+
+{% endblock CONTENIDO %}
